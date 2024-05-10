@@ -176,9 +176,12 @@ const handleDrawerClose = () => {
         <Divider />
     <List >
       {/* {['Home', 'Tracks List', 'Albums List'].map((text, index) => ( */}
-        {menuItems.map((text,index,href ) => (
-    //  <ListItem key={index} onClick={() => router.push("/tracks")}>
-         <ListItem key={index} onClick={() => router.push(menuItems[index].href)}>
+        {/* {menuItems.map((text,index,href ) => (
+           <ListItem key={index} onClick={() => router.push(menuItems[index].href)}> */}
+                {menuItems.map(({text,href},index ) => (
+           <ListItem key={href} onClick={() => router.push(href)}>
+     {/* <ListItem key={index} onClick={() => router.push("/tracks")}> */}
+        
        {/* <ListItem key={index}> */}
         {/* <ListItem key={text} disablePadding> */}
           <ListItemButton>
